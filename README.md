@@ -1,10 +1,5 @@
 # 🌸 Aromatic — QR-Based Restaurant Booking System & Admin CRM Panel
 
-> **Technical Assignment Submission for Axiomae IT — MERN Stack Internship**  
-> Built by: Priyanshi (Candidate for MERN Stack Intern Role)  
-> Project: QR-Driven Table Reservation Platform with Admin Management & Lightweight CRM
-
----
 
 ## 🌐 Live Deployment Links
 
