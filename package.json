@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm --prefix client run build",
     "build:client": "npm --prefix client run build",
-    "render-build": "npm --prefix client install && npm --prefix client run build && npm --prefix server install",
+    "render-build": "npm --prefix client install --include=dev && npm --prefix client run build && npm --prefix server install",
     "start": "npm --prefix server start",
     "start:server": "npm --prefix server start",
     "dev:server": "npm --prefix server run dev",
