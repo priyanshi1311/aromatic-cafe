@@ -14,8 +14,7 @@
 | **🔐 Admin & CRM Portal** | [https://aromatic-cafe-1vy2-delta.vercel.app/admin/login](https://aromatic-cafe-1vy2-delta.vercel.app/admin/login) |
 | **⚡ Backend API (Render)** | [https://aromatic-cafe.onrender.com/](https://aromatic-cafe.onrender.com/) |
 | **📦 GitHub Repository** | [https://github.com/priyanshi1311/aromatic-cafe](https://github.com/priyanshi1311/aromatic-cafe) |
-| **💬 Restaurant WhatsApp Helpline** | `+91 8077049464` |
-
+| **💬 Restaurant WhatsApp Helpline**
 ### 🔑 Testing Credentials (Admin Portal)
 * **URL**: [https://aromatic-cafe-1vy2-delta.vercel.app/admin/login](https://aromatic-cafe-1vy2-delta.vercel.app/admin/login)
 * **Email**: `admin@aromatic.com`
@@ -34,7 +33,7 @@ Traditional restaurants rely on manual phone calls or fragmented WhatsApp chats,
 - **Instant QR Booking**: Customers scan a table QR or restaurant poster QR on their mobile browser and book in under 45 seconds without creating an account or downloading an app.
 - **Double-Booking Prevention**: Backend guarantees real-time slot checking across active table capacities and time slots.
 - **Lightweight Admin CRM**: Tracks every guest's visit count, past dining logs, loyalty tags (`👑 VIP`, `🌸 Regular`, `⛔ Blacklisted`), and staff internal preferences/notes.
-- **Interactive Calendar & WhatsApp Integration**: Features a live monthly calendar booking view, one-click WhatsApp confirmation vouchers directly sent to `+91 8077049464`, and full CSV exports.
+- **Interactive Calendar & WhatsApp Integration**: Features a live monthly calendar booking view, one-click WhatsApp confirmation vouchers directly sent, and full CSV exports.
 
 ---
 
@@ -46,7 +45,7 @@ Traditional restaurants rely on manual phone calls or fragmented WhatsApp chats,
 * **Live Availability Engine**: Dynamically displays only unbooked time slots and tables with sufficient capacity for the chosen party size and dining date.
 * **Smart Validation**: Blocks past dates, enforces operational opening/closing hours, validates Indian 10-digit / international phone numbers, and checks table capacity.
 * **Digital Reservation Voucher**: Instant confirmation screen with unique booking ID (e.g., `AROM-XXXXXX`), table number, date, time slot, and print-ready pass.
-* **[BONUS] WhatsApp Confirmation**: One-click button on confirmation screen to send and share booking details directly to the restaurant WhatsApp helpline (`+91 8077049464`) with pre-composed text.
+* **[BONUS] WhatsApp Confirmation**: One-click button on confirmation screen to send and share booking details directly to the restaurant WhatsApp helpline with pre-composed text.
 
 ### 🛡️ 2.2 Admin Panel & Management
 * **Secure JWT Authentication**: Protected admin routes with bcrypt-hashed passwords and stateless token verification.
@@ -179,9 +178,8 @@ Open your browser at `http://localhost:5173` to view the website, or `http://loc
 
 ---
 
-## 🏆 7. Bonus Points Completed Summary
-
-1. ✅ **WhatsApp Booking Confirmation**: Integrated on both the public voucher screen (`BookingSuccess.jsx`) and the admin management modal (`BookingsPage.jsx`) to `+91 8077049464`.
+## 🏆  FEATURES
+1. ✅ **WhatsApp Booking Confirmation**: Integrated on both the public voucher screen (`BookingSuccess.jsx`) and the admin management modal (`BookingsPage.jsx`) .
 2. ✅ **Calendar View in Admin Panel**: Added a monthly interactive calendar view toggle alongside the standard table view.
 3. ✅ **Full Customer CRM**: Tagging (`VIP`, `Regular`, `Blacklisted`), custom staff notes, visit counts, and complete past dining history records.
 4. ✅ **Dual CSV Exports**: CSV data export implemented for both Reservations and Customer directory.
@@ -190,4 +188,4 @@ Open your browser at `http://localhost:5173` to view the website, or `http://loc
 
 ---
 
-© 2026 Aromatic Cafe & Restaurant. Submission for Axiomae IT.
+© 2026 Aromatic Cafe & Restaurant.
