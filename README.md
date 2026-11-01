@@ -1,5 +1,28 @@
 # 🌸 Aromatic — QR-Based Restaurant Booking System & Admin CRM Panel
 
+> **Technical Assignment Submission for Axiomae IT — MERN Stack Internship**  
+> Built by: Priyanshi (Candidate for MERN Stack Intern Role)  
+> Project: QR-Driven Table Reservation Platform with Admin Management & Lightweight CRM
+
+---
+
+## 🌐 Live Deployment Links
+
+| Resource | Live Link |
+| :--- | :--- |
+| **🚀 Live Customer Website (Vercel)** | [https://aromatic-cafe-1vy2-delta.vercel.app/](https://aromatic-cafe-1vy2-delta.vercel.app/) |
+| **🔐 Admin & CRM Portal** | [https://aromatic-cafe-1vy2-delta.vercel.app/admin/login](https://aromatic-cafe-1vy2-delta.vercel.app/admin/login) |
+| **⚡ Backend API (Render)** | [https://aromatic-cafe.onrender.com/](https://aromatic-cafe.onrender.com/) |
+| **📦 GitHub Repository** | [https://github.com/priyanshi1311/aromatic-cafe](https://github.com/priyanshi1311/aromatic-cafe) |
+| **💬 Restaurant WhatsApp Helpline** | `+91 8077049464` |
+
+### 🔑 Testing Credentials (Admin Portal)
+* **URL**: [https://aromatic-cafe-1vy2-delta.vercel.app/admin/login](https://aromatic-cafe-1vy2-delta.vercel.app/admin/login)
+* **Email**: `admin@aromatic.com`
+* **Password**: `Admin@123`
+
+---
+
 ## 📌 1. Project Overview
 
 **Aromatic** is a full-stack, production-ready table reservation and lightweight customer relationship management (CRM) platform designed specifically for experiential dining cafes and restaurants.
@@ -11,7 +34,7 @@ Traditional restaurants rely on manual phone calls or fragmented WhatsApp chats,
 - **Instant QR Booking**: Customers scan a table QR or restaurant poster QR on their mobile browser and book in under 45 seconds without creating an account or downloading an app.
 - **Double-Booking Prevention**: Backend guarantees real-time slot checking across active table capacities and time slots.
 - **Lightweight Admin CRM**: Tracks every guest's visit count, past dining logs, loyalty tags (`👑 VIP`, `🌸 Regular`, `⛔ Blacklisted`), and staff internal preferences/notes.
-- **Interactive Calendar & WhatsApp Integration**: Features a live monthly calendar booking view, one-click WhatsApp confirmation vouchers, and full CSV exports.
+- **Interactive Calendar & WhatsApp Integration**: Features a live monthly calendar booking view, one-click WhatsApp confirmation vouchers directly sent to `+91 8077049464`, and full CSV exports.
 
 ---
 
@@ -23,7 +46,7 @@ Traditional restaurants rely on manual phone calls or fragmented WhatsApp chats,
 * **Live Availability Engine**: Dynamically displays only unbooked time slots and tables with sufficient capacity for the chosen party size and dining date.
 * **Smart Validation**: Blocks past dates, enforces operational opening/closing hours, validates Indian 10-digit / international phone numbers, and checks table capacity.
 * **Digital Reservation Voucher**: Instant confirmation screen with unique booking ID (e.g., `AROM-XXXXXX`), table number, date, time slot, and print-ready pass.
-* **[BONUS] WhatsApp Confirmation**: One-click button on confirmation screen to save and share booking vouchers on WhatsApp with pre-composed text.
+* **[BONUS] WhatsApp Confirmation**: One-click button on confirmation screen to send and share booking details directly to the restaurant WhatsApp helpline (`+91 8077049464`) with pre-composed text.
 
 ### 🛡️ 2.2 Admin Panel & Management
 * **Secure JWT Authentication**: Protected admin routes with bcrypt-hashed passwords and stateless token verification.
@@ -50,13 +73,14 @@ Traditional restaurants rely on manual phone calls or fragmented WhatsApp chats,
 | :--- | :--- |
 | **Frontend** | React 19, Vite, React Router DOM 7, Tailwind CSS, Axios, react-qrcode-logo, react-hot-toast, Lodash |
 | **Backend** | Node.js, Express.js (RESTful API Architecture) |
-| **Database** | MongoDB with Mongoose ODM (Atlas or Local MongoDB) |
+| **Database** | MongoDB with Mongoose ODM (MongoDB Atlas Cloud Cluster) |
 | **Authentication** | JSON Web Tokens (JWT), Bcrypt.js password hashing |
+| **Hosting** | Vercel (Frontend CDN) + Render (Node.js API & Full-Stack fallback) |
 | **Code Structure** | Monorepo structure with decoupled `/client` and `/server` |
 
 ---
 
-## 🚀 4. Setup & Installation Guide
+## 🚀 4. Setup & Local Installation Guide
 
 ### Prerequisites
 * **Node.js** (v18.x or higher)
@@ -65,8 +89,8 @@ Traditional restaurants rely on manual phone calls or fragmented WhatsApp chats,
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/axiomae.git
-cd axiomae
+git clone https://github.com/priyanshi1311/aromatic-cafe.git
+cd aromatic-cafe
 ```
 
 ### Step 2: Install Dependencies
@@ -83,7 +107,7 @@ npm --prefix client install
 1. **Backend `.env`** (create `server/.env` or copy from `server/.env.example`):
 ```env
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/restaurant_booking
+MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/restaurant_booking?retryWrites=true&w=majority
 JWT_SECRET=super_secret_jwt_key_aromatic_2026
 JWT_EXPIRES_IN=7d
 NODE_ENV=development
@@ -103,26 +127,20 @@ VITE_API_BASE_URL=http://localhost:5000/api
 ```
 
 ### Step 4: Seed Initial Admin Account
-Run the database seed script to initialize the admin manager:
+Run the database seed script to initialize the admin manager (or server auto-seeds on first boot):
 ```bash
 node server/scripts/seedAdmin.js
 ```
 
 ### Step 5: Start the Application
 
-**Option A: Run concurrently from root**
+**Run concurrently in two terminals:**
 ```bash
 # Terminal 1: Backend API (port 5000)
 npm run dev:server
 
 # Terminal 2: Frontend Vite App (port 5173)
 npm run dev:client
-```
-
-**Option B: Production Build Verification**
-```bash
-# Build the client production assets
-npm run build:client
 ```
 
 Open your browser at `http://localhost:5173` to view the website, or `http://localhost:5173/admin/login` for the staff portal.
@@ -133,7 +151,8 @@ Open your browser at `http://localhost:5173` to view the website, or `http://loc
 
 | Credential | Value |
 | :--- | :--- |
-| **Admin Portal URL** | `http://localhost:5173/admin/login` |
+| **Live Admin Portal URL** | `https://aromatic-cafe-1vy2-delta.vercel.app/admin/login` |
+| **Local Admin Portal URL** | `http://localhost:5173/admin/login` |
 | **Email** | `admin@aromatic.com` |
 | **Password** | `Admin@123` |
 | **Role** | Super Admin / Cafe Manager |
@@ -160,16 +179,15 @@ Open your browser at `http://localhost:5173` to view the website, or `http://loc
 
 ---
 
-##  features
+## 🏆 7. Bonus Points Completed Summary
 
-
-1. ✅ **WhatsApp Booking Confirmation**: Integrated on both the public voucher screen (`BookingSuccess.jsx`) and the admin management modal (`BookingsPage.jsx`).
+1. ✅ **WhatsApp Booking Confirmation**: Integrated on both the public voucher screen (`BookingSuccess.jsx`) and the admin management modal (`BookingsPage.jsx`) to `+91 8077049464`.
 2. ✅ **Calendar View in Admin Panel**: Added a monthly interactive calendar view toggle alongside the standard table view.
 3. ✅ **Full Customer CRM**: Tagging (`VIP`, `Regular`, `Blacklisted`), custom staff notes, visit counts, and complete past dining history records.
 4. ✅ **Dual CSV Exports**: CSV data export implemented for both Reservations and Customer directory.
 5. ✅ **Live Analytics Visualization**: Progress bar distribution of booking statuses on the admin dashboard.
+6. ✅ **Deployed Live Version with Working QR Codes**: Live on Vercel & Render with live MongoDB Atlas connection.
 
 ---
 
-© 2026 Aromatic Cafe & Restaurant. 
-
+© 2026 Aromatic Cafe & Restaurant. Submission for Axiomae IT.
