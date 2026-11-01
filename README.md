@@ -160,7 +160,8 @@ Open your browser at `http://localhost:5173` to view the website, or `http://loc
 
 ---
 
-## 🏆 7. Bonus Points Completed Summary
+##  features
+
 
 1. ✅ **WhatsApp Booking Confirmation**: Integrated on both the public voucher screen (`BookingSuccess.jsx`) and the admin management modal (`BookingsPage.jsx`).
 2. ✅ **Calendar View in Admin Panel**: Added a monthly interactive calendar view toggle alongside the standard table view.
@@ -170,5 +171,5 @@ Open your browser at `http://localhost:5173` to view the website, or `http://loc
 
 ---
 
-© 2026 Aromatic Cafe & Restaurant. Submission for Axiomae IT.
+© 2026 Aromatic Cafe & Restaurant. 
 
